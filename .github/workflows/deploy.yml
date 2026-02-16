@@ -9,10 +9,6 @@ permissions:
   pages: write
   id-token: write
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -25,14 +21,6 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-
-      - name: Set homepage for GitHub Pages
-        run: |
-          node -e "
-          const p = require('./package.json');
-          p.homepage = 'https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/';
-          require('fs').writeFileSync('package.json', JSON.stringify(p, null, 2));
-          "
 
       - name: Install dependencies
         run: npm install
@@ -51,10 +39,8 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
