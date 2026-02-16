@@ -1,0 +1,107 @@
+.app {
+  min-height: 100vh;
+  background-color: var(--bg);
+  color: var(--lettering);
+}
+
+.main-content {
+  padding-top: 80px;
+  min-height: calc(100vh - 80px);
+}
+
+/* Bronze-gold gradient text */
+.gold-text {
+  background: linear-gradient(135deg, var(--gold-dark) 0%, var(--gold-logo) 50%, var(--gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+/* Section styling */
+.section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: var(--lettering);
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  font-weight: 500;
+}
+
+.section-subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--lettering);
+  border-bottom: 1px solid var(--gold-border);
+  padding-bottom: 0.5rem;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* Button styling */
+.btn {
+  padding: 14px 32px;
+  background: linear-gradient(145deg, var(--gold-dark) 0%, var(--gold-logo) 100%);
+  color: #000;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px var(--gold-glow);
+  background: linear-gradient(145deg, var(--gold-dark) 0%, var(--gold-logo) 100%);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--gold-logo);
+  color: var(--lettering);
+}
+
+.btn-outline:hover {
+  background: var(--gold-subtle);
+  border-color: var(--lettering);
+  color: var(--gold-light);
+}
+
+/* Card styling */
+.card {
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 30px;
+  margin: 20px 0;
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  border-color: var(--lettering);
+  box-shadow: 0 8px 24px var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .section {
+    padding: 40px 15px;
+  }
+}

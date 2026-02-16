@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Logo-matched metallic gold (from YorkU Steel Bridge logo) */
+  --gold-logo: #D4AF37;           /* accents – matches logo */
+  --gold-logo-rgb: 212, 175, 55;
+  --gold-dark: #B8962E;          /* darker shade for buttons/borders */
+  --gold-light: #E2C45C;        /* lighter tint for hover */
+  --lettering: #d6c7a0;         /* text color */
+  --bg: #0a0a0a;
+  --gold-subtle: rgba(var(--gold-logo-rgb), 0.08);
+  --gold-border: rgba(var(--gold-logo-rgb), 0.28);
+  --gold-glow: rgba(var(--gold-logo-rgb), 0.22);
+}
+
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg);
+  color: var(--lettering);
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+  color: var(--lettering);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+a:hover {
+  color: var(--gold-light);
+}

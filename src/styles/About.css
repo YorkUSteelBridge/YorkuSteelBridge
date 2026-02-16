@@ -1,0 +1,64 @@
+.about {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.about-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about-section {
+  margin-bottom: 50px;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--lettering);
+  margin-bottom: 20px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.value-card {
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.25s ease;
+}
+
+.value-card:hover {
+  border-color: var(--lettering);
+  box-shadow: 0 8px 24px var(--gold-glow);
+  transform: translateY(-2px);
+}
+
+.value-card h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--lettering);
+  font-size: 1.25rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.value-card p {
+  color: var(--lettering);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}

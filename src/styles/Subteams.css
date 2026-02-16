@@ -1,0 +1,166 @@
+.subteams {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.subteams-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--lettering);
+  max-width: 800px;
+  margin: 0 auto 40px;
+  line-height: 1.8;
+}
+
+.subteams-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.subteam-tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  color: var(--lettering);
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.subteam-tab:hover {
+  border-color: var(--lettering);
+  background: var(--gold-glow);
+  transform: translateY(-1px);
+}
+
+.subteam-tab.active {
+  background: linear-gradient(145deg, var(--gold-dark) 0%, var(--gold-logo) 100%);
+  border-color: var(--lettering);
+  color: #000;
+  font-weight: 600;
+}
+
+.tab-icon {
+  font-size: 1.3rem;
+}
+
+.subteam-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.subteam-card {
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 40px;
+  animation: fadeIn 0.5s ease;
+}
+
+.subteam-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 25px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--gold-border);
+}
+
+.subteam-icon {
+  font-size: 2.5rem;
+  opacity: 0.9;
+}
+
+.subteam-title {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--lettering);
+  font-size: 1.85rem;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+.subteam-description {
+  font-size: 1.1rem;
+  color: var(--lettering);
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.subteam-responsibilities h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--lettering);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.subteam-responsibilities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.subteam-responsibilities li {
+  color: var(--lettering);
+  font-size: 1rem;
+  padding: 10px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.subteam-responsibilities li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--lettering);
+  font-weight: bold;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .subteams-tabs {
+    flex-direction: column;
+  }
+  
+  .subteam-tab {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .subteam-card {
+    padding: 25px;
+  }
+  
+  .subteam-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .subteam-title {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,166 @@
+.contact {
+  min-height: 100vh;
+  padding: 40px 0;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.info-section p,
+.sponsor-section p {
+  font-size: 1.1rem;
+  color: var(--lettering);
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.contact-item {
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 20px;
+}
+
+.contact-item h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--lettering);
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.contact-item p {
+  color: var(--lettering);
+  font-size: 1rem;
+  margin: 0;
+}
+
+.sponsor-benefits {
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 25px;
+}
+
+.sponsor-benefits h3 {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  color: var(--lettering);
+  font-size: 1.15rem;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.sponsor-benefits ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sponsor-benefits li {
+  color: var(--lettering);
+  font-size: 1rem;
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.sponsor-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--lettering);
+  font-weight: bold;
+}
+
+.contact-form-container {
+  background: var(--gold-subtle);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  padding: 40px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-group label {
+  color: var(--lettering);
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  padding: 12px 15px;
+  background: rgba(10, 10, 10, 0.6);
+  border: 1px solid var(--gold-border);
+  border-radius: 2px;
+  color: var(--lettering);
+  font-size: 1rem;
+  font-family: inherit;
+  transition: all 0.25s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: var(--lettering);
+  box-shadow: 0 0 0 1px var(--gold-glow);
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-select option {
+  background: var(--bg);
+  color: var(--lettering);
+}
+
+@media (max-width: 968px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form-container {
+    padding: 30px 20px;
+  }
+}
