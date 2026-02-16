@@ -16,7 +16,7 @@ const Landing = () => {
             Join us as we design, analyze, and construct steel bridges that push the boundaries of structural engineering.
           </p>
           <div className="hero-buttons">
-            <Link to="/about" className="btn">Learn More</Link>
+            <Link to="/about" className="btn btn-outline">Learn More</Link>
             <a href="https://docs.google.com/forms/d/e/1FAIpQLScsZQtUL2F8i5tkxxuuqqo8QWuMCJX1jzST4t6NSuoPOMIj8Q/viewform" target="_blank" rel="noopener noreferrer" className="btn btn-outline">Join the Team</a>
             <Link to="/contact" className="btn btn-outline">Get Involved</Link>
           </div>
