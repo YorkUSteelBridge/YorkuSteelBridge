@@ -11,7 +11,7 @@ import './styles/App.css';
 
 function App() {
   return (
-    <Router basename={process.env.PUBLIC_URL && process.env.PUBLIC_URL !== '.' ? new URL(process.env.PUBLIC_URL).pathname.replace(/\/$/, '') || '/' : '/'}>
+    <Router>
       <div className="app">
         <Navbar />
         <main className="main-content">
